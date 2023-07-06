@@ -20,7 +20,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     container:
-      image: docker run -it azdevcliextacr.azurecr.io/azure-dev:pr-2488
+      image: azdevcliextacr.azurecr.io/azure-dev:pr-2488
     env:
       AZURE_CLIENT_ID: ${{ vars.AZURE_CLIENT_ID }}
       AZURE_TENANT_ID: ${{ vars.AZURE_TENANT_ID }}
