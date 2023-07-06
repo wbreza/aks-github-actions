@@ -3,6 +3,19 @@
 name: todo-nodejs-mongo-aks
 metadata:
   template: todo-nodejs-mongo-aks@0.0.1-beta
+hooks:
+  postprovision:
+    shell: sh
+    interactive: true
+    run: |
+      kubectl config current-context
+      kubectl get service
+  postdeploy:
+    shell: sh
+    interactive: true
+    run: |
+      kubectl config current-context
+      kubectl get service
 services:
   web:
     project: ./src/web
